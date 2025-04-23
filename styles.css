@@ -32,35 +32,6 @@ header h1 {
 header p {
     font-size: 1.1em;
 }
-
-#cv-download, #cv-qr {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  #cv-download h2, #cv-qr h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  #cv-download p, #cv-qr p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  #cv-download a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #D70654;
-    color: #FFEFC8;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  #cv-download a:hover {
-    background-color: #f84083;
-  }
-
 .block {
     padding: 3em 2em;
     margin-bottom: 2em;
