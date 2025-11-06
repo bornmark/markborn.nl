@@ -1,55 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B1RDQT1NR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-4B1RDQT1NR');
-    </script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mark Born - AI Developer specializing in web and mobile development, AI, and emerging technologies. Passionate about building intelligent digital experiences.">
-    <meta name="author" content="Mark Born">
-    <title>MARK BORN - AI Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mark Born - Mendix Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply custom fonts */
+        h1 {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .font-code {
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        /* 4. Animations for "life" */
+        
+        /* Core pulse (Reliability, Independence) */
+        @keyframes core-pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+                box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+                box-shadow: 0 0 40px rgba(59, 130, 246, 1);
+            }
+        }
+        .animate-core-pulse {
+            animation: core-pulse 3s infinite cubic-bezier(0.4, 0, 0.6, 1);
+        }
+        
+        /* Orbit rotation (Constant development, Dynamics) */
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 40s linear infinite;
+        }
+        .animate-spin-slow-reverse {
+            animation: spin-slow 50s linear infinite reverse;
+        }
+
+        /* Logic "flow" animation */
+        @keyframes flow {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .svg-flow {
+            stroke-dasharray: 100;
+            animation: flow 3s linear infinite;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>MARK BORN</h1>
-        <p>PASSIONATE AI DEVELOPER | CYCLING & HIKING ENTHUSIAST</p>
-    </header>
-  
-    <section id="about" class="block">
-        <h2>ABOUT ME</h2>
-        <article class="about-content">
-            <p>Hi, I'm Mark! Exploring the world of web and mobile development with a strong passion for AI and emerging tech. My focus is on building intelligent digital experiences by integrating AI into web services and apps.</p>
-            <p>I work with HTML, CSS, JavaScript, and TypeScript, diving into React, Next.js, and Vue/Nuxt for front-end development. On the mobile side, React Native is a key tool, and I’m also exploring Flutter.</p>
-            <p>For the backend, I use Python (Django, Flask, FastAPI) to create scalable APIs. My AI/ML journey includes TensorFlow, PyTorch, scikit-learn, and frameworks like LangChain. Hugging Face’s open-source tools play a big role in my learning and projects.</p>
-            <p>My stack also includes PostgreSQL, MongoDB, Firebase, along with Docker, Kubernetes, Nginx, and cloud platforms like Google, Meta and Microsoft. I’m focused on writing clean, efficient code and refining my debugging and deployment workflows with Git and CI/CD.</p>
-            <p>Excited to connect and explore how AI can shape the future of web and mobile experiences!</p>
-        </article>
-    </section>
 
-    <section id="contact" class="block contact-block">
-        <h2>CONTACT</h2>
-        <div class="contact-details">
-            <p><strong>NAME:</strong> Mark Born</p>
-            <p><strong>CITY & COUNTRY:</strong> Nijmegen, Netherlands</p>
-            <p><strong>EMAIL:</strong> <a href="mailto:markborn.nl@gmail.com" rel="noopener noreferrer">markborn.nl@gmail.com</a></p>
+<body class="bg-gray-900 text-gray-200 flex flex-col justify-center items-center min-h-screen p-4 overflow-hidden">
+
+    <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 z-10">
+        MARK BORN
+    </h1>
+
+    <div class="relative w-[350px] h-[350px] md:w-[500px] md:h-[500px] mt-8 flex justify-center items-center">
+
+        <div class="absolute w-full h-full grid grid-cols-6 grid-rows-6 opacity-10">
+            <div class="col-span-6 h-px bg-cyan-500 self-start"></div>
+            <div class="col-span-6 h-px bg-cyan-500 self-center"></div>
+            <div class="col-span-6 h-px bg-cyan-500 self-end"></div>
+            <div class="row-span-6 w-px bg-cyan-500 justify-self-start"></div>
+            <div class="row-span-6 w-px bg-cyan-500 justify-self-center"></div>
+            <div class="row-span-6 w-px bg-cyan-500 justify-self-end"></div>
         </div>
-    </section>
+        
+        <a href="mailto:info@markborn.nl" 
+           class="absolute w-24 h-24 md:w-32 md:h-32 bg-blue-600 rounded-full flex justify-center items-center shadow-xl animate-core-pulse
+                  transition-transform duration-300 hover:scale-110"
+           title="Click to email me">
+            <span class="font-code font-bold text-white text-sm md:text-lg">MARK</span>
+        </a>
+        
+        <div class="absolute w-52 h-52 md:w-72 md:h-72 border-2 border-dashed border-cyan-700 rounded-full animate-spin-slow">
+            <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-24 h-10 bg-cyan-400 text-gray-900 rounded-lg flex justify-center items-center font-code font-bold shadow-lg shadow-cyan-400/30">
+                MENDIX
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Mark Born. All rights reserved.</p>
-    </footer>
+        <div class="absolute w-72 h-72 md:w-[420px] md:h-[420px] border border-dotted border-purple-600 rounded-full animate-spin-slow-reverse">
+            <div class="absolute -bottom-4 left-1/4 -translate-x-1/2 w-20 h-8 bg-purple-500 text-white rounded-md flex justify-center items-center font-code text-sm shadow-md shadow-purple-500/30">
+                UI/UX
+            </div>
+            
+            <div class="absolute -top-4 right-1/4 translate-x-1/2 w-20 h-8 bg-green-500 text-white rounded-md flex justify-center items-center font-code text-sm shadow-md shadow-green-500/30">
+                TEAM
+            </div>
+        </div>
+
+        <svg class="absolute w-full h-full opacity-30" viewbox="0 0 200 200">
+            <path d="M 100 100 L 100 28" stroke="#06b6d4" stroke-width="2" fill="none" class="svg-flow" />
+            <path d="M 100 100 L 50 150" stroke="#a855f7" stroke-width="1.5" fill="none" class="svg-flow" style="animation-delay: 1s;" />
+            <path d="M 100 100 L 150 50" stroke="#22c55e" stroke-width="1.5" fill="none" class="svg-flow" style="animation-delay: 2s;" />
+        </svg>
+
+        <span class="absolute top-1/4 left-1/4 font-code text-lg text-green-600 opacity-50 -rotate-12">&lt;/&gt;</span>
+        <span class="absolute bottom-1/4 right-1/4 font-code text-lg text-yellow-500 opacity-50 rotate-12">{ js }</span>
+        <span class="absolute bottom-1/4 left-1/4 font-code text-lg text-blue-400 opacity-50 rotate-12">.css</span>
+
+    </div>
+
+    <p class="mt-12 font-code text-gray-400 z-10 text-center max-w-lg">
+        Mendix Developer <span class="text-cyan-400">|</span> UI/UX Design <span class="text-cyan-400">|</span> HTML, CSS, JS Foundation
+    </p>
+
 </body>
 </html>
