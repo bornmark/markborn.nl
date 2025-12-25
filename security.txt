@@ -1,0 +1,16 @@
+# security.txt for markborn.nl
+# Mark Born - AI-Augmented Products Founder
+
+Contact: mailto:info@markborn.nl
+Preferred-Languages: en, nl, ru
+Canonical: https://markborn.nl/.well-known/security.txt
+Expires: 2026-12-31T23:59:59.000Z
+
+# Policy
+Policy: https://markborn.nl/security-policy
+
+# Acknowledgments
+Acknowledgments: https://markborn.nl/security-acknowledgments
+
+# If you discover a security vulnerability, please report it responsibly
+# Send details to info@markborn.nl with subject: "Security Vulnerability Report"

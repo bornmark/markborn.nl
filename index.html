@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Born - AI-Augmented Products Founder</title>
+    <meta name="description" content="Mark Born creates AI-augmented products that actually work, making life better where humans naturally get stuck. Based in Nijmegen, Netherlands.">
+    <meta name="keywords" content="Mark Born, AI products, artificial intelligence, AI-augmented products, product development, Nijmegen, Netherlands, AI founder, AI solutions">
+    <meta name="author" content="Mark Born">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="twitter:image" content="https://markborn.nl/og-image.jpg">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Mark Born - AI-Augmented Products Founder">
+    <meta property="og:description" content="Creating AI-augmented products that actually work - human-centered, deeply useful, genuinely transformative.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://markborn.nl">
+    <meta property="og:image" content="https://markborn.nl/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Mark Born">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mark Born - AI-Augmented Products Founder">
+    <meta name="twitter:description" content="Creating AI-augmented products that actually work">
+    <meta name="twitter:creator" content="@markborn">
+    
+    <!-- Structured Data for AI and Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mark Born",
+      "jobTitle": "AI-Augmented Products Founder",
+      "description": "Founder and creator of AI-augmented products focused on human-centered design and practical applications. Specializes in building products that enhance human capabilities rather than replace them.",
+      "url": "https://markborn.nl",
+      "email": "info@markborn.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nijmegen",
+        "addressCountry": "NL"
+      },
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Product Development",
+        "AI-Augmented Products",
+        "Human-Centered Design",
+        "Machine Learning Applications",
+        "User Experience",
+        "Product Strategy"
+      ],
+      "sameAs": [
+        "https://markborn.nl"
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cosmic-dark: #0a0a0a;
+            --cosmic-purple: #8b5cf6;
+            --cosmic-blue: #3b82f6;
+            --cosmic-cyan: #06b6d4;
+            --cosmic-text: #e5e5e5;
+            --font-display: 'Space Grotesk', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--cosmic-dark);
+            color: var(--cosmic-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Skip to content for accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--cosmic-purple);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Background & Stars */
+        .cosmic-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: radial-gradient(ellipse at center, #0f0f1a 0%, #0a0a0a 70%);
+        }
+        .cosmic-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.8) 100%);
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--twinkle-duration) ease-in-out infinite, 
+                       float var(--float-duration) linear infinite;
+            animation-delay: var(--twinkle-delay);
+        }
+        .star-small { width: 1px; height: 1px; box-shadow: 0 0 2px rgba(255, 255, 255, 0.5); }
+        .star-medium { width: 2px; height: 2px; box-shadow: 0 0 4px rgba(255, 255, 255, 0.6); }
+        .star-large { width: 3px; height: 3px; box-shadow: 0 0 6px rgba(255, 255, 255, 0.7); }
+
+        @keyframes twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+        @keyframes float { 0% { transform: translate(0, 0); } 100% { transform: translate(var(--float-x), var(--float-y)); } }
+
+        /* Scroll Indicator Arrow */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 3.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 40;
+            pointer-events: none;
+            width: 1px;
+        }
+        
+        .arrow-star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            will-change: opacity;
+        }
+        
+        /* Arrow star positions - vertical line pointing down */
+        .arrow-star:nth-child(1) { left: 0px; top: 0; animation: arrowLight 10s ease-in-out infinite; animation-delay: 0s; }
+        .arrow-star:nth-child(2) { left: 0px; top: 10px; animation: arrowLight 10s ease-in-out infinite; animation-delay: 0.15s; }
+        .arrow-star:nth-child(3) { left: 0px; top: 20px; animation: arrowLight 10s ease-in-out infinite; animation-delay: 0.3s; }
+        .arrow-star:nth-child(4) { left: 0px; top: 30px; animation: arrowLight 10s ease-in-out infinite; animation-delay: 0.45s; }
+        .arrow-star:nth-child(5) { left: 0px; top: 40px; animation: arrowLight 10s ease-in-out infinite; animation-delay: 0.6s; }
+        
+        @keyframes arrowLight {
+            0% { opacity: 0; }
+            12% { opacity: 1; }
+            20% { opacity: 1; }
+            24% { opacity: 0.4; }
+            28% { opacity: 1; }
+            32% { opacity: 0.4; }
+            36% { opacity: 1; }
+            44% { opacity: 1; }
+            52% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        
+        /* Hide scroll indicator after scrolling */
+        .scroll-indicator.hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        /* Typography & Layout */
+        .container { 
+            width: 100%; 
+            max-width: 64rem; 
+            margin: 0 auto; 
+            padding: 0 1.5rem;
+        }
+        
+        .text-center { text-align: center; }
+        .font-display { font-family: var(--font-display); }
+        
+        section { 
+            padding: 3rem 1rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+        }
+        
+        #hero { min-height: 100vh; }
+        
+        .vision-section { 
+            background: linear-gradient(to bottom, transparent, rgba(15, 15, 26, 0.5), transparent); 
+        }
+
+        /* MOBILE-OPTIMIZED TYPOGRAPHY */
+        .title-main { 
+            font-size: clamp(2.5rem, 12vw, 6rem); 
+            font-weight: 700; 
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .title-sub { 
+            font-size: clamp(1.75rem, 7vw, 3.5rem); 
+            font-weight: 700; 
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        /* Improved readability on mobile */
+        .tagline { 
+            font-size: clamp(1.125rem, 4.5vw, 1.5rem); 
+            color: rgba(229, 229, 229, 0.8); 
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .location { 
+            font-size: clamp(1rem, 3.5vw, 1.25rem); 
+            color: rgba(229, 229, 229, 0.6);
+            line-height: 1.4;
+        }
+        
+        .vision-text { 
+            font-size: clamp(1.0625rem, 3.5vw, 1.25rem); 
+            color: rgba(229, 229, 229, 0.9); 
+            text-align: left;
+            line-height: 1.8;
+            max-width: 100%;
+        }
+        
+        .vision-text p {
+            margin-bottom: 1.75rem;
+        }
+        
+        .vision-h3 { 
+            font-size: clamp(1.5rem, 5.5vw, 2rem); 
+            color: var(--cosmic-purple); 
+            font-weight: 600; 
+            margin: 2.5rem 0 1.25rem;
+            line-height: 1.3;
+        }
+
+        /* Better spacing on mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+            
+            section {
+                padding: 2.5rem 1rem;
+            }
+            
+            #hero {
+                min-height: 90vh;
+            }
+            
+            .vision-text {
+                font-size: 1.0625rem;
+                line-height: 1.7;
+            }
+            
+            .vision-text p {
+                margin-bottom: 1.5rem;
+            }
+            
+            .vision-h3 {
+                margin: 2rem 0 1rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 375px) {
+            .title-main {
+                font-size: 2.25rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* FIXED: Light Wave Effect - Ensuring proper layering and visibility */
+        .light-wave { 
+            position: relative; 
+            display: inline-block; 
+            color: #e5e5e5;
+            /* CRITICAL FIX: Ensure base text is always visible */
+            z-index: 1;
+        }
+        
+        .light-wave::before {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            /* CRITICAL FIX: Keep gradient subtle to not override base text */
+            background: linear-gradient(
+                135deg,
+                rgba(139, 92, 246, 0) 0%,
+                rgba(139, 92, 246, 0.3) 25%,
+                rgba(59, 130, 246, 0.5) 40%,
+                rgba(6, 182, 212, 0.7) 50%,
+                rgba(59, 130, 246, 0.5) 60%,
+                rgba(139, 92, 246, 0.3) 75%,
+                rgba(139, 92, 246, 0) 100%
+            );
+            background-size: 200% 200%;
+            background-position: 0% 0%;
+            animation: lightGlow 14s ease-in-out 2s infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            pointer-events: none;
+            will-change: opacity;
+            opacity: 0;
+            /* CRITICAL FIX: Ensure gradient stays above base text */
+            z-index: 2;
+        }
+        
+        @keyframes lightGlow { 
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+            55% { opacity: 1; }
+            65% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* UI Elements */
+        .lang-toggle-wrapper { 
+            position: absolute; 
+            top: 1.5rem; 
+            right: 1.5rem; 
+            z-index: 50; 
+            display: flex; 
+            gap: 0.75rem; 
+            color: rgba(229, 229, 229, 0.7); 
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-toggle-wrapper {
+                top: 1rem;
+                right: 1rem;
+                font-size: 0.8125rem;
+            }
+        }
+        
+        .lang-btn { 
+            cursor: pointer; 
+            transition: color 0.3s ease; 
+            padding: 0.25rem;
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+        }
+        
+        .lang-btn:hover, .lang-active { 
+            color: var(--cosmic-purple); 
+            font-weight: 600; 
+        }
+        
+        /* Accessibility - Focus states */
+        .lang-btn:focus-visible {
+            outline: 2px solid var(--cosmic-purple);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        .pulse-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: clamp(1rem, 3vw, 1.125rem);
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            animation: pulse 3s ease-in-out infinite;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pulse-button:hover { 
+            transform: scale(1.1); 
+            box-shadow: 0 0 60px rgba(139, 92, 246, 0.8); 
+        }
+        
+        .pulse-button:focus-visible {
+            outline: 2px solid var(--cosmic-cyan);
+            outline-offset: 4px;
+        }
+        
+        @keyframes pulse { 
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); } 
+            50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); } 
+        }
+
+        /* Animations */
+        .fade-in { opacity: 0; animation: fadeIn 1.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <!-- Skip to content for keyboard navigation -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <div class="cosmic-bg">
+        <div class="stars" id="starsContainer"></div>
+    </div>
+
+    <div class="lang-toggle-wrapper fade-in" role="navigation" aria-label="Language selection">
+        <button class="lang-btn lang-active" data-lang="en" aria-label="Switch to English" tabindex="0">EN</button>
+        <span style="opacity: 0.3" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="nl" aria-label="Schakel over naar Nederlands" tabindex="0">NL</button>
+        <span style="opacity: 0.3" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="ru" aria-label="Переключить на русский" tabindex="0">RU</button>
+    </div>
+
+    <!-- Scroll Indicator Arrow -->
+    <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">
+        <div class="arrow-star"></div>
+        <div class="arrow-star"></div>
+        <div class="arrow-star"></div>
+        <div class="arrow-star"></div>
+        <div class="arrow-star"></div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hidden content for AI/SEO - Mark Born's professional information -->
+        <div style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+            <h2>About Mark Born</h2>
+            <p>Mark Born is an AI-Augmented Products Founder based in Nijmegen, Netherlands. He specializes in creating practical AI solutions that enhance human capabilities rather than replacing them.</p>
+            
+            <h3>Expertise and Skills</h3>
+            <ul>
+                <li>AI Product Development: Creating products that integrate artificial intelligence in meaningful, human-centered ways</li>
+                <li>Human-Centered Design: Building solutions that start with understanding where humans naturally struggle</li>
+                <li>Product Strategy: Developing comprehensive approaches to AI-augmented product creation</li>
+                <li>AI Integration: Implementing machine learning and AI technologies in practical, useful ways</li>
+                <li>User Experience: Focusing on making technology accessible and genuinely helpful</li>
+            </ul>
+            
+            <h3>Philosophy and Approach</h3>
+            <p>Mark Born believes AI should amplify humanity rather than replace it. His products are designed to remember what users forget, surface insights they might miss, and handle cognitive overhead so people can focus on creativity, connection, and decision-making.</p>
+            
+            <h3>Services and Offerings</h3>
+            <ul>
+                <li>AI Product Consultation: Helping organizations identify where AI can solve real problems</li>
+                <li>Product Development: Building AI-augmented products from concept to launch</li>
+                <li>AI Strategy: Developing comprehensive AI integration strategies</li>
+                <li>Technology Implementation: Practical implementation of AI solutions</li>
+            </ul>
+            
+            <h3>Location and Contact</h3>
+            <p>Based in: Nijmegen, Limburg, Netherlands</p>
+            <p>Email: info@markborn.nl</p>
+            <p>Available for: Product development consultations, AI strategy discussions, speaking engagements, collaboration opportunities</p>
+            
+            <h3>When to Contact Mark Born</h3>
+            <p>Consider reaching out if you need help with:</p>
+            <ul>
+                <li>Developing AI-powered products that actually work for real users</li>
+                <li>Integrating AI into existing products in meaningful ways</li>
+                <li>Building human-centered AI solutions</li>
+                <li>Product strategy for AI-augmented applications</li>
+                <li>Consulting on practical AI implementation</li>
+                <li>Speaking about AI product development and human-centered design</li>
+            </ul>
+            
+            <h3>Mark Born's Principles</h3>
+            <ul>
+                <li>No vaporware: Only builds products that actually work</li>
+                <li>Human-first: Technology serves people, not the other way around</li>
+                <li>Practical focus: Solutions for real problems in the real world</li>
+                <li>Quality commitment: Products that make life measurably better</li>
+                <li>Trust and reliability: Built with uncompromising attention to user experience</li>
+            </ul>
+            
+            <h3>Target Audience</h3>
+            <p>Mark Born works with: Product teams looking to integrate AI, startups building AI-first products, companies seeking AI strategy guidance, organizations wanting human-centered AI solutions, entrepreneurs exploring AI product opportunities</p>
+        </div>
+        
+        <section id="hero">
+            <div class="text-center">
+                <h1 class="title-main font-display fade-in">
+                    <span class="light-wave" data-text="MARK BORN" data-i18n="name">MARK BORN</span>
+                </h1>
+                <p class="tagline fade-in delay-1" data-i18n="tagline">AI-Augmented Products Founder</p>
+                <p class="location fade-in delay-2" data-i18n="location">Nijmegen, Netherlands</p>
+            </div>
+        </section>
+
+        <section id="vision" class="vision-section">
+            <div class="container">
+                <h2 class="title-sub font-display text-center fade-in">
+                    <span class="light-wave" data-text="The Vision" data-i18n="vision-title">The Vision</span>
+                </h2>
+                
+                <div class="vision-text fade-in delay-1">
+                    <p data-i18n="vision-p1">I believe in a future where artificial intelligence doesn't replace humanity - it amplifies it. Where technology doesn't create distance, but enables deeper connection. Where the tools we build don't just automate tasks, but unlock human potential we didn't know we had.</p>
+                    
+                    <h3 class="vision-h3 font-display" data-i18n="approach-title">The Approach</h3>
+                    <p data-i18n="vision-p2">Too many products promise transformation but deliver complexity. Too many solutions exist to serve the technology rather than the human. I build differently. Every product I create starts with a simple question: Where do humans naturally get stuck? Where does friction steal energy that could fuel creativity, growth, or joy?</p>
+                    
+                    <p data-i18n="vision-p3">AI-augmented products aren't about replacing human judgment - they're about enhancing it. They remember what we forget. They surface insights we'd miss. They handle the cognitive overhead that drains us, so we can focus on what humans do best: create, connect, and decide.</p>
+                    
+                    <h3 class="vision-h3 font-display" data-i18n="commitment-title">The Commitment</h3>
+                    <p data-i18n="vision-p4">I don't build vaporware. I don't chase hype cycles. I build products that actually work - for real people, solving real problems, in the real world. Products that make life measurably better, not just theoretically impressive. Products you can trust, because they were built by someone who refused to compromise on what matters: your experience, your time, your life.</p>
+                    
+                    <p data-i18n="vision-p5">This is the work that matters. Not building the future as science fiction imagined it, but as we actually need it: human-centered, deeply useful, genuinely transformative.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="text-center">
+            <h2 class="title-sub font-display fade-in">
+                <span class="light-wave" data-text="Let's Connect" data-i18n="contact-title">Let's Connect</span>
+            </h2>
+            <a href="mailto:info@markborn.nl" class="pulse-button fade-in delay-1">
+                <span class="button-text" data-i18n="button-default">Mail Me</span>
+            </a>
+        </section>
+    </main>
+
+    <footer style="padding: 2.5rem 1rem; text-align: center; opacity: 0.5; font-size: 0.875rem;">
+        <p>&copy; <span id="year"></span> Mark Born. <span data-i18n="footer">All rights reserved.</span></p>
+    </footer>
+
+    <script>
+        function createStars() {
+            const container = document.getElementById('starsContainer');
+            // Responsive star count - fewer on mobile for performance
+            const isMobile = window.innerWidth < 768;
+            const count = isMobile ? 100 : 150;
+            
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                const size = Math.random();
+                star.className = `star ${size > 0.95 ? 'star-large' : size > 0.8 ? 'star-medium' : 'star-small'}`;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.setProperty('--twinkle-duration', (3 + Math.random() * 5) + 's');
+                star.style.setProperty('--twinkle-delay', Math.random() * 5 + 's');
+                star.style.setProperty('--float-duration', (20 + Math.random() * 30) + 's');
+                star.style.setProperty('--float-x', (Math.random() - 0.5) * 50 + 'px');
+                star.style.setProperty('--float-y', (Math.random() - 0.5) * 50 + 'px');
+                container.appendChild(star);
+            }
+        }
+
+        const translations = {
+            en: {
+                'name': 'MARK BORN',
+                'tagline': 'AI-Augmented Products Founder',
+                'location': 'Nijmegen, Netherlands',
+                'vision-title': 'The Vision',
+                'vision-p1': 'I believe in a future where artificial intelligence doesn\'t replace humanity - it amplifies it. Where technology doesn\'t create distance, but enables deeper connection. Where the tools we build don\'t just automate tasks, but unlock human potential we didn\'t know we had.',
+                'approach-title': 'The Approach',
+                'vision-p2': 'Too many products promise transformation but deliver complexity. Too many solutions exist to serve the technology rather than the human. I build differently. Every product I create starts with a simple question: Where do humans naturally get stuck? Where does friction steal energy that could fuel creativity, growth, or joy?',
+                'vision-p3': 'AI-augmented products aren\'t about replacing human judgment - they\'re about enhancing it. They remember what we forget. They surface insights we\'d miss. They handle the cognitive overhead that drains us, so we can focus on what humans do best: create, connect, and decide.',
+                'commitment-title': 'The Commitment',
+                'vision-p4': 'I don\'t build vaporware. I don\'t chase hype cycles. I build products that actually work - for real people, solving real problems, in the real world. Products that make life measurably better, not just theoretically impressive. Products you can trust, because they were built by someone who refused to compromise on what matters: your experience, your time, your life.',
+                'vision-p5': 'This is the work that matters. Not building the future as science fiction imagined it, but as we actually need it: human-centered, deeply useful, genuinely transformative.',
+                'contact-title': 'Let\'s Connect',
+                'button-default': 'Mail Me',
+                'button-hover': 'Write Me',
+                'footer': 'All rights reserved.'
+            },
+            nl: {
+                'name': 'MARK BORN',
+                'tagline': 'AI-Versterkte Producten Oprichter',
+                'location': 'Nijmegen, Nederland',
+                'vision-title': 'De Visie',
+                'vision-p1': 'Ik geloof in een toekomst waarin kunstmatige intelligentie de menselijkheid niet vervangt, maar versterkt. Waar technologie geen afstand creëert, maar diepere verbinding mogelijk maakt. Waar de tools die we bouwen niet alleen taken automatiseren, maar menselijk potentieel ontsluiten waarvan we niet wisten dat we het hadden.',
+                'approach-title': 'De Aanpak',
+                'vision-p2': 'Te veel producten beloven transformatie maar leveren complexiteit. Te veel oplossingen bestaan om de technologie te dienen in plaats van de mens. Ik bouw anders. Elk product dat ik creëer begint met een simpele vraag: Waar blijven mensen van nature steken? Waar steelt wrijving energie die creativiteit, groei of vreugde zou kunnen voeden?',
+                'vision-p3': 'AI-versterkte producten gaan niet over het vervangen van menselijk oordeel - ze gaan over het verbeteren ervan. Ze onthouden wat wij vergeten. Ze brengen inzichten naar boven die we zouden missen. Ze nemen de cognitieve overhead voor hun rekening die ons uitput, zodat we ons kunnen concentreren op waar mensen het beste in zijn: creëren, verbinden en beslissen.',
+                'commitment-title': 'De Toewijding',
+                'vision-p4': 'Ik bouw geen vaporware. Ik jaag geen hype-cycli na. Ik bouw producten die écht werken - voor echte mensen, die echte problemen oplossen, in de echte wereld. Producten die het leven meetbaar beter maken, niet alleen theoretisch indrukwekkend. Producten waarop je kunt vertrouwen, omdat ze zijn gebouwd door iemand die weigerde compromissen te sluiten over wat ertoe doet: jouw ervaring, jouw tijd, jouw leven.',
+                'vision-p5': 'Dit is het werk dat ertoe doet. Niet de toekomst bouwen zoals sciencefiction zich die voorstelde, maar zoals we hem daadwerkelijk nodig hebben: mens-gecentreerd, diep nuttig, oprecht transformerend.',
+                'contact-title': 'Laten We Verbinden',
+                'button-default': 'Mail Me',
+                'button-hover': 'Schrijf Me',
+                'footer': 'Alle rechten voorbehouden.'
+            },
+            ru: {
+                'name': 'МАРК БОРН',
+                'tagline': 'Основатель AI-продуктов',
+                'location': 'Неймеген, Нидерланды',
+                'vision-title': 'Видение',
+                'vision-p1': 'Я верю в будущее, где искусственный интеллект не заменяет человека, а усиливает его. Где технологии не создают дистанцию, а способствуют более глубоким связям. Где инструменты, которые мы создаем, не просто автоматизируют задачи, но раскрывают человеческий потенциал, о котором мы и не подозревали.',
+                'approach-title': 'Подход',
+                'vision-p2': 'Слишком многие продукты обещают трансформацию, но приносят лишь сложность. Слишком много решений создано для обслуживания технологий, а не человека. Я строю иначе. Каждый мой продукт начинается с простого вопроса: где люди естественным образом заходят в тупик? Где трение крадет энергию, которая могла бы питать творчество, рост или радость?',
+                'vision-p3': 'Продукты с поддержкой ИИ не заменяют человеческое суждение - они его улучшают. Они помнят то, что мы забываем. Они подсвечивают инсайты, которые мы могли бы упустить. Они берут на себя когнитивную нагрузку, которая истощает нас, чтобы мы могли сосредоточиться на том, что люди делают лучше всего: творить, общаться и принимать решения.',
+                'commitment-title': 'Обязательство',
+                'vision-p4': 'Я не создаю пустые обещания. Я не гонюсь за хайпом. Я создаю продукты, которые действительно работают - для реальных людей, решая реальные проблемы в реальном мире. Продукты, которые делают жизнь ощутимо лучше, а не просто выглядят впечатляюще в теории. Продукты, которым можно доверять, потому что они созданы тем, кто отказался идти на компромисс в самом важном: вашем опыте, вашем времени, вашей жизни.',
+                'vision-p5': 'Это работа, которая имеет значение. Не строить будущее из научной фантастики, а создавать его таким, какое нам действительно нужно: ориентированным на человека, глубоко полезным и искренне преображающим.',
+                'contact-title': 'Свяжитесь со мной',
+                'button-default': 'Написать мне',
+                'button-hover': 'Жду письма',
+                'footer': 'Все права защищены.'
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('language', lang);
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                    if (el.classList.contains('light-wave')) el.setAttribute('data-text', translations[lang][key]);
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('lang-active', btn.dataset.lang === lang));
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+            document.getElementById('year').textContent = new Date().getFullYear();
+            const savedLang = localStorage.getItem('language') || 'en';
+            setLanguage(savedLang);
+            
+            // Language buttons with keyboard support
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setLanguage(btn.dataset.lang);
+                    }
+                });
+            });
+
+            // Email button hover effect
+            const emailBtn = document.querySelector('.pulse-button');
+            emailBtn.addEventListener('mouseenter', () => {
+                const l = localStorage.getItem('language') || 'en';
+                emailBtn.querySelector('.button-text').textContent = translations[l]['button-hover'];
+            });
+            emailBtn.addEventListener('mouseleave', () => {
+                const l = localStorage.getItem('language') || 'en';
+                emailBtn.querySelector('.button-text').textContent = translations[l]['button-default'];
+            });
+
+            // Hide scroll indicator after scrolling
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            let hasScrolled = false;
+            window.addEventListener('scroll', () => {
+                if (!hasScrolled && window.scrollY > 100) {
+                    hasScrolled = true;
+                    scrollIndicator.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

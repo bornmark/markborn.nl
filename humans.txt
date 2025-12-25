@@ -1,0 +1,30 @@
+/* TEAM */
+
+Creator: Mark Born
+Site: https://markborn.nl
+Location: Nijmegen, Netherlands
+Email: info@markborn.nl
+
+/* ABOUT */
+
+Mark Born is an AI-Augmented Products Founder based in Nijmegen, Netherlands.
+He creates AI-powered products that actually work - human-centered, deeply useful,
+and genuinely transformative.
+
+Philosophy: AI should amplify humanity, not replace it. Technology should enable
+deeper connection, not create distance. Products should unlock human potential,
+not just automate tasks.
+
+/* SITE */
+
+Last update: 2025/12/25
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Responsive Design, Progressive Web App
+Software: Hand-coded with attention to accessibility and performance
+Fonts: Inter, Space Grotesk (Google Fonts)
+
+/* THANKS */
+
+To everyone who believes in human-centered AI
+To the open source community
+To users who trust in products built with integrity
