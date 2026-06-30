@@ -1,0 +1,9 @@
+# security.txt for markborn.nl - https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:info@markborn.nl
+Preferred-Languages: en, nl
+Canonical: https://markborn.nl/security.txt
+Expires: 2027-06-30T23:59:59.000Z
+
+# If you discover a security issue, please report it to info@markborn.nl
+# with the subject line "Security report".

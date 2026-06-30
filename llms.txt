@@ -1,0 +1,14 @@
+# Mark Born
+
+> I build AI products that can't lie about being done. Verification-first AI development and rescue of broken AI builds, based in Nijmegen, Gelderland, Netherlands. "Done" is computed from evidence: passing tests, the real commit, the action completing through the real interface, never self-reported.
+
+## Pages
+- [Home](https://markborn.nl/): Who builds, and how. Concrete commitments behind verification-first AI development; honest diagnosis first (fix, rebuild, or leave it alone).
+- [Why AI code breaks in production](https://markborn.nl/why-ai-code-breaks-in-production/): Why AI-built apps pass the demo and fail real users, and what changes when "done" is computed from evidence instead of claimed.
+
+## Languages
+- English (primary): https://markborn.nl/
+- Dutch: https://markborn.nl/nl/
+
+## Contact
+- Email: info@markborn.nl

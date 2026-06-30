@@ -1,0 +1,50 @@
+# robots.txt for markborn.nl
+# Every bot is welcome, search and AI alike. Nothing on the public surface is private.
+# Broad allow maximises both entity recognition and search citation.
+
+# --- Search and retrieval (citations and referral traffic) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Training and bulk ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# --- Everything else ---
+User-agent: *
+Allow: /
+
+Sitemap: https://markborn.nl/sitemap.xml

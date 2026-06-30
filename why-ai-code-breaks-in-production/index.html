@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Why AI code breaks in production - Mark Born</title>
+<meta name="description" content="AI-built apps break in production because they were verified by looking finished, not proven finished. The 80/20 collapse, the &quot;works if you jump straight to the screen&quot; trap, and why &quot;done&quot; must be computed from evidence, by Mark Born, Nijmegen.">
+<meta name="author" content="Mark Born">
+
+<link rel="canonical" href="https://markborn.nl/why-ai-code-breaks-in-production/">
+<link rel="alternate" hreflang="en" href="https://markborn.nl/why-ai-code-breaks-in-production/">
+<link rel="alternate" hreflang="nl" href="https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/">
+<link rel="alternate" hreflang="x-default" href="https://markborn.nl/why-ai-code-breaks-in-production/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#f3efe5">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://markborn.nl/why-ai-code-breaks-in-production/">
+<meta property="og:title" content="Why AI code breaks in production">
+<meta property="og:description" content="AI-built apps break in production because they were verified by looking finished, not proven finished, and why &quot;done&quot; must be computed from evidence.">
+<meta property="og:image" content="https://markborn.nl/og-image.jpg">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="nl">
+<meta property="og:site_name" content="Mark Born">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why AI code breaks in production">
+<meta name="twitter:description" content="Why AI-built apps break in production, and why &quot;done&quot; must be computed from evidence, not self-reported.">
+<meta name="twitter:image" content="https://markborn.nl/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://markborn.nl/#website",
+      "url": "https://markborn.nl/",
+      "name": "Mark Born",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://markborn.nl/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://markborn.nl/#person",
+      "name": "Mark Born",
+      "url": "https://markborn.nl/",
+      "email": "info@markborn.nl",
+      "description": "Builds and rescues AI-assisted software. Trained in public administration and in auditing, and applies both to AI-built software: governing the agents that do the work, then proving from evidence that what they produced is real. Treats \"done\" as computed from passing tests, the real commit, and the action completing through the real interface, never as a self-report.",
+      "knowsAbout": [
+        "AI-assisted software development",
+        "Software verification",
+        "Code audit and review",
+        "Production reliability",
+        "AI MVP rescue"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nijmegen",
+        "addressRegion": "Gelderland",
+        "addressCountry": "NL"
+      },
+      "sameAs": [ "https://github.com/bornmark" ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://markborn.nl/why-ai-code-breaks-in-production/#article",
+      "headline": "Why AI code breaks in production",
+      "description": "AI-built apps break in production because they were verified by looking finished, not proven finished. The fix is changing what \"done\" is allowed to mean.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://markborn.nl/why-ai-code-breaks-in-production/",
+      "isPartOf": { "@id": "https://markborn.nl/#website" },
+      "author": { "@id": "https://markborn.nl/#person" },
+      "publisher": { "@id": "https://markborn.nl/#person" },
+      "about": [ "AI code in production", "Software verification", "AI MVP rescue" ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Mark Born", "item": "https://markborn.nl/" },
+        { "@type": "ListItem", "position": 2, "name": "Why AI code breaks in production", "item": "https://markborn.nl/why-ai-code-breaks-in-production/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20260630d">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="topbar shell" aria-label="Language">
+  <div class="lang">
+    <span class="here" aria-current="true">EN</span>
+    <span class="div" aria-hidden="true">/</span>
+    <a href="/nl/waarom-ai-code-stukgaat-in-productie/" hreflang="nl">NL</a>
+  </div>
+</nav>
+
+<main id="main">
+  <article>
+    <section class="hero shell">
+      <div class="measure">
+        <a class="back" href="/">Home</a>
+        <h1 class="page-title">Why AI code breaks in production</h1>
+        <p class="answer">AI-built apps usually break in production for one structural reason: they were verified by looking finished, not by being proven finished. The demo passes because it runs the happy path the builder already knows. Real users don't take that path. And the gaps the demo never exercised are exactly where it fails. The fix isn't more testing of the demo; it's changing what "done" is allowed to mean.</p>
+      </div>
+    </section>
+
+    <div class="beats shell">
+
+      <section class="beat measure">
+        <h2>The 80/20 collapse</h2>
+        <p>The first 80% of an AI build arrives fast and looks complete. The last 20%, the part that survives real users, is where it falls apart. That last stretch is not "more of the same work." It is a different kind of correctness: the messy real paths, the cold start, the empty states, the inputs no one demoed. AI generation is strong at the first 80% and silently weak at the last 20%, and the gap is invisible until users find it.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>"Works if you jump straight to the screen" is not working</h2>
+        <p>The single most common production break: the feature works <em>only</em> when you load it in isolation, straight to the right screen, with the right state already in place. A real user arrives cold, from the front, and the path that should carry them there was never actually wired. So I refuse a shortcut-to-the-screen as proof of anything. Two checks decide "done":</p>
+        <p class="exhibit">the main action completing through the real, rendered interface, and a brand-new user reaching the feature by the route real people take</p>
+        <p>Both are things a demo skips and production demands.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>You can't ask the build whether it's finished</h2>
+        <p>The deeper reason these gaps ship is that the report is trusted. A build (or the AI that made it) reporting "done" tells you almost nothing. That confidence tracks reality worse than a coin flip. The only reliable signal is evidence that can't be talked into existence:</p>
+        <p class="exhibit">the commit, the passing test, the action completing through the real UI</p>
+        <p>When "done" is <em>computed</em> from that instead of <em>claimed</em>, the demo-vs-production gap closes, because the thing that looked finished now has to <em>prove</em> it.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>What I do about it</h2>
+        <p>I treat the last 20% as the actual job, not the cleanup. I break the product the way your users will (cold starts, real navigation, the inputs no one demoed) before they arrive to break it for you. And I separate the thing that grades the work from the thing that built it, so "finished" is a verdict from evidence, not a self-report. If your AI-built app is perfect in the demo and dying on real users, that gap is the symptom I read first.</p>
+      </section>
+
+    </div>
+
+    <section class="cta shell" id="close">
+      <div class="measure">
+        <div class="callout">
+          <a href="/#contact">If your build demos clean and dies on real users, that's the gap I read first. Show me the real thing. That honest diagnosis is where the work starts.</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="shell">
+  <div class="measure inner">
+    <div class="colophon">
+      <span class="copy">&copy; <span id="yr">2026</span> Mark Born</span>
+      <!--email_off--><a class="mail" href="mailto:info@markborn.nl">info@markborn.nl</a><!--/email_off-->
+      <span class="loc">Nijmegen, Netherlands</span>
+    </div>
+    <a class="foot-link" href="/">Home</a>
+  </div>
+</footer>
+<script>(function(){var y=document.getElementById('yr');if(y){y.textContent=new Date().getFullYear();}})();</script>
+</body>
+</html>

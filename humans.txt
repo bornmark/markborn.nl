@@ -1,0 +1,20 @@
+/* WHO */
+
+Creator: Mark Born
+Site: https://markborn.nl
+Location: Nijmegen, Gelderland, Netherlands
+Email: info@markborn.nl
+
+/* ABOUT */
+
+Mark Born builds and rescues AI-assisted software. "Done" is computed from
+evidence: passing tests, the real commit, the action completing through the
+real interface, never self-reported. Honest diagnosis first: fix, rebuild,
+or leave it alone.
+
+/* SITE */
+
+Last update: 2026-06-29
+Standards: HTML5, CSS3
+Components: Static site, responsive, no JavaScript, WCAG-AA
+Fonts: Newsreader, IBM Plex Mono (Google Fonts)

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mark Born - AI products that can't lie about being done</title>
+<meta name="description" content="Verification-first AI development and rescue of broken AI builds by Mark Born, Nijmegen. &quot;Done&quot; is computed from evidence: passing tests, the real commit, the action completing through the real interface, never self-reported. Honest diagnosis for broken AI builds: fix, rebuild, or leave it alone.">
+<meta name="author" content="Mark Born">
+
+<link rel="canonical" href="https://markborn.nl/">
+<link rel="alternate" hreflang="en" href="https://markborn.nl/">
+<link rel="alternate" hreflang="nl" href="https://markborn.nl/nl/">
+<link rel="alternate" hreflang="x-default" href="https://markborn.nl/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#f3efe5">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://markborn.nl/">
+<meta property="og:title" content="Mark Born - AI products that can't lie about being done">
+<meta property="og:description" content="Verification-first AI development and rescue of broken AI builds. &quot;Done&quot; is computed from evidence, not self-reported. Honest diagnosis for broken AI builds.">
+<meta property="og:image" content="https://markborn.nl/og-image.jpg">
+<meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="nl">
+<meta property="og:site_name" content="Mark Born">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mark Born - AI products that can't lie about being done">
+<meta name="twitter:description" content="Verification-first AI development and rescue of broken AI builds. &quot;Done&quot; is computed from evidence, not self-reported.">
+<meta name="twitter:image" content="https://markborn.nl/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://markborn.nl/#website",
+      "url": "https://markborn.nl/",
+      "name": "Mark Born",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://markborn.nl/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://markborn.nl/#person",
+      "name": "Mark Born",
+      "url": "https://markborn.nl/",
+      "email": "info@markborn.nl",
+      "description": "Builds and rescues AI-assisted software. Trained in public administration and in auditing, and applies both to AI-built software: governing the agents that do the work, then proving from evidence that what they produced is real. Treats \"done\" as computed from passing tests, the real commit, and the action completing through the real interface, never as a self-report.",
+      "knowsAbout": [
+        "AI-assisted software development",
+        "Software verification",
+        "Code audit and review",
+        "Production reliability",
+        "AI MVP rescue"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nijmegen",
+        "addressRegion": "Gelderland",
+        "addressCountry": "NL"
+      },
+      "sameAs": [ "https://github.com/bornmark" ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://markborn.nl/#profilepage",
+      "url": "https://markborn.nl/",
+      "name": "Mark Born - AI products that can't lie about being done",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://markborn.nl/#website" },
+      "mainEntity": { "@id": "https://markborn.nl/#person" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20260630d">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="topbar shell" aria-label="Language">
+  <div class="lang">
+    <span class="here" aria-current="true">EN</span>
+    <span class="div" aria-hidden="true">/</span>
+    <a href="/nl/" hreflang="nl">NL</a>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="hero shell">
+    <div class="measure">
+      <h1 class="thesis">I build AI products that can't lie about being done</h1>
+      <div class="lede">
+        <p>Your AI-built product says it works. The demo runs, the checklist is green. But under that sits a quieter question no one answered for you: do you actually <em>know</em> it works, or do you just know that something told you it does? Most AI code is trusted because it <em>looks</em> finished. I build on the opposite assumption.</p>
+        <p>That assumption isn't a pose. It's the lens I was trained to see through. Two disciplines shaped how I think. Public administration, where I hold a master's and trained inside government, is the study of getting an apparatus to produce a reliable outcome without doing every task yourself. And auditing, which I did in consulting, is the opposite reflex: trust the evidence, never the assurance. Orchestrating AI to make software turns out to be exactly those two, pointed at a new kind of workforce: govern the agents that do the work, then prove what they produced is real. Directing the build is the easy half. Proving that "done" is true, not reported and not assumed, is the whole job, and the half almost everyone skips.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="beats shell">
+
+    <section class="beat measure">
+      <h2>It says it's done. Is it?</h2>
+      <p>I found something uncomfortable while building: you can't <em>ask</em> an AI whether it finished. Its confidence that the work is done lines up with reality less often than a coin flip. So I stopped trusting the report, its and my own. On my work, "done" is not a claim anyone makes. It is <em>computed</em> from things that can't be talked into existence:</p>
+      <p class="exhibit">the real commit, passing tests, the actual action completing through the actual screen</p>
+      <p>And the thing that grades the work is never the thing that did the work. You get a product whose "finished" is a fact, not a feeling.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> I can stop re-checking whether they're lying to me about "done."</p>
+    </section>
+
+    <section class="beat measure">
+      <h2>Perfect in the demo. Dead on real users</h2>
+      <p>The first 80% of an AI build comes together in an evening and looks flawless. Then real people arrive and the last 20% collapses. The cause is almost always the same: it works <em>if you jump straight to the right screen</em>, and a real user never does that. So I treat two things as the real finish line, both of which a demo skips.</p>
+      <p class="exhibit">the main action has to work through the real, rendered interface, not in isolation, and a brand-new user has to reach the feature by the path people actually take</p>
+      <p>A shortcut straight to the screen does not count as proof. I break the product the way your users will, before they show up to do it for me.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> it won't fall apart the moment it meets real people.</p>
+      <p class="deeper"><a href="/why-ai-code-breaks-in-production/">Read: Why AI code breaks in production</a></p>
+    </section>
+
+    <section class="beat measure">
+      <h2>Fix it, rebuild it, or leave it alone. The truth first</h2>
+      <p>When a codebase is in trouble, the most expensive sentence you can hear is "rewrite everything" from someone who never read it. I read the real code first, then tell you the truth: what to fix, what to rebuild, what to leave alone, including "this is fine, you don't need me," when that is the honest answer. The verdict comes as a written plan you can hand to <em>any</em> developer. That detachment is the whole point: if I recommended a rebuild and only I could do it, you'd have no way to tell me apart from the people who burned you. You can. And under the mess I don't patch the symptom. I find the clean architecture the broken version was blindly reaching for, and name it.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> being scammed by the person I hired to help.</p>
+    </section>
+
+    <section class="beat measure">
+      <h2>The invoice that quietly kills the project</h2>
+      <p>These days the fear isn't only bad code. It's the surprise bill. AI tooling can burn a budget silently and end a project in a single month. I measured this on my own work: the "cheap temporary version, just to test it" cost three to four times more than building the real thing once, and left nothing to keep. So I build the right thing the first time, price it fixed for a scoped result instead of by the hour (hourly punishes speed: you'd pay more for me being fast), and keep spend capped and visible, not discovered at month's end.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> the AI bill that arrives too late to do anything about.</p>
+    </section>
+
+    <section class="beat measure">
+      <h2>Three months later the model updated and everything broke</h2>
+      <p>AI code has a short shelf life: a new model or tool version ships, the product rots, and you pay to rebuild what already worked. I split every product on purpose:</p>
+      <p class="exhibit">a stable core that holds your real logic and rules, and a thin outer layer that touches the fast-moving model</p>
+      <p>When the tooling changes, only the outer layer is rewritten. The core stands. You stop paying for the same thing every quarter.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> paying again, on every model release, for work I already paid for.</p>
+    </section>
+
+    <section class="beat measure">
+      <h2>What if they're confidently wrong?</h2>
+      <p>The most expensive mistakes don't look like mistakes. They look like a confident, reasonable answer that happens to be wrong. AI does this constantly; so do people. The instinct to "just fix the obvious cause" is exactly how a wrong guess becomes broken data and lost days. So I built a stop into my own process:</p>
+      <p class="exhibit">nothing gets changed on a <em>story</em> about what's wrong, only on the actual evidence of what's wrong</p>
+      <p>That stop catches me too. More than once I've started down a fix that looked completely right and killed it within minutes, the moment I checked it against what had actually happened. The one worth trusting isn't the person who's never wrong. It's the one whose process catches it fast, before it reaches your product.</p>
+      <p class="lift"><span class="k">The fear this lifts:</span> they won't confidently break my thing on a wrong guess, and they'll catch their own mistakes before I pay for them.</p>
+    </section>
+
+    <section class="beat peak measure">
+      <h2>Why most AI builds come out shallow</h2>
+      <p>Everyone knows you get more from an AI by asking better. That's why prompt engineering caught on. But the prompt is the small lever. Behind every answer is a large amount of hidden work the model does on itself: the questions it asks itself, the angles it weighs, how hard it actually thinks before it replies. What I found, working this way, is that <strong>putting the model into the right state for the task ahead matters more than how you phrase the request.</strong> Most tools run it as an order-taker: it does what you said, at the shallowest reading that satisfies the words. That is where demo-deep, falls-apart-later output comes from. For real work I run it as an investigator: thinking at depth, questioning its own assumptions, going after the <em>real</em> problem instead of the stated one.</p>
+      <p>The two halves fit together. I take everything I can from how the model <em>thinks</em>, and trust nothing of what it <em>claims</em>.</p>
+      <p class="exhibit">depth on the way in, evidence on the way out</p>
+      <p>That combination is the craft, and it's most of why what I build holds up where a quick build doesn't.</p>
+    </section>
+
+    <section class="beat fit measure">
+      <h2>Whether we're a fit</h2>
+      <p><strong>A fit if</strong> you have a real problem and want a finished result (a project or a fixed engagement) and you value speed and quality over hourly bureaucracy. Also a fit if your thing is genuinely messy and broken: I'd rather have a real, unpredictable problem than a tidy invented one.</p>
+    </section>
+
+  </div>
+
+  <section class="cta shell" id="contact">
+    <div class="measure">
+      <h2>Send me the real broken thing</h2>
+      <div class="body">
+        <p>If your build is breaking and you need to know what's actually wrong, show me the real thing: the broken repo, the stuck deploy, the product that demos clean and dies on real users. I'll tell you the truth, what's really going on, and whether the right move is a fix, a rebuild, or walking away. That honest diagnosis is where the work starts.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="shell">
+  <div class="measure inner">
+    <div class="colophon">
+      <span class="copy">&copy; <span id="yr">2026</span> Mark Born</span>
+      <!--email_off--><a class="mail" href="mailto:info@markborn.nl">info@markborn.nl</a><!--/email_off-->
+      <span class="loc">Nijmegen, Netherlands</span>
+    </div>
+    <a class="foot-link" href="/why-ai-code-breaks-in-production/">Why AI code breaks in production</a>
+  </div>
+</footer>
+<script>(function(){var y=document.getElementById('yr');if(y){y.textContent=new Date().getFullYear();}})();</script>
+</body>
+</html>

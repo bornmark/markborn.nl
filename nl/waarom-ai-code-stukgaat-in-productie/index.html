@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Waarom AI-code stukgaat in productie - Mark Born</title>
+<meta name="description" content="AI-gebouwde apps gaan in productie stuk omdat ze geverifieerd werden door er af uit te zien, niet door bewezen af te zijn. De 80/20-instorting, de val van &quot;werkt als je meteen naar het scherm springt&quot;, en waarom &quot;af&quot; uit bewijs moet worden berekend, door Mark Born, Nijmegen.">
+<meta name="author" content="Mark Born">
+
+<link rel="canonical" href="https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/">
+<link rel="alternate" hreflang="en" href="https://markborn.nl/why-ai-code-breaks-in-production/">
+<link rel="alternate" hreflang="nl" href="https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/">
+<link rel="alternate" hreflang="x-default" href="https://markborn.nl/why-ai-code-breaks-in-production/">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#f3efe5">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/">
+<meta property="og:title" content="Waarom AI-code stukgaat in productie">
+<meta property="og:description" content="AI-gebouwde apps gaan in productie stuk omdat ze geverifieerd werden door er af uit te zien, niet door bewezen af te zijn, en waarom &quot;af&quot; uit bewijs moet worden berekend.">
+<meta property="og:image" content="https://markborn.nl/og-image.jpg">
+<meta property="og:locale" content="nl">
+<meta property="og:locale:alternate" content="en">
+<meta property="og:site_name" content="Mark Born">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Waarom AI-code stukgaat in productie">
+<meta name="twitter:description" content="Waarom AI-gebouwde apps in productie stukgaan, en waarom &quot;af&quot; uit bewijs moet worden berekend, niet zelf-gerapporteerd.">
+<meta name="twitter:image" content="https://markborn.nl/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://markborn.nl/#website",
+      "url": "https://markborn.nl/",
+      "name": "Mark Born",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://markborn.nl/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://markborn.nl/#person",
+      "name": "Mark Born",
+      "url": "https://markborn.nl/",
+      "email": "info@markborn.nl",
+      "description": "Builds and rescues AI-assisted software. Trained in public administration and in auditing, and applies both to AI-built software: governing the agents that do the work, then proving from evidence that what they produced is real. Treats \"done\" as computed from passing tests, the real commit, and the action completing through the real interface, never as a self-report.",
+      "knowsAbout": [
+        "AI-assisted software development",
+        "Software verification",
+        "Code audit and review",
+        "Production reliability",
+        "AI MVP rescue"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nijmegen",
+        "addressRegion": "Gelderland",
+        "addressCountry": "NL"
+      },
+      "sameAs": [ "https://github.com/bornmark" ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/#article",
+      "headline": "Waarom AI-code stukgaat in productie",
+      "description": "AI-gebouwde apps gaan in productie stuk omdat ze geverifieerd werden door er af uit te zien, niet door bewezen af te zijn. De oplossing is veranderen wat \"af\" mag betekenen.",
+      "inLanguage": "nl",
+      "mainEntityOfPage": "https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/",
+      "isPartOf": { "@id": "https://markborn.nl/#website" },
+      "author": { "@id": "https://markborn.nl/#person" },
+      "publisher": { "@id": "https://markborn.nl/#person" },
+      "about": [ "AI-code in productie", "Softwareverificatie", "AI MVP-redding" ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Mark Born", "item": "https://markborn.nl/nl/" },
+        { "@type": "ListItem", "position": 2, "name": "Waarom AI-code stukgaat in productie", "item": "https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20260630d">
+</head>
+<body>
+<a class="skip" href="#main">Naar de inhoud</a>
+
+<nav class="topbar shell" aria-label="Taal">
+  <div class="lang">
+    <a href="/why-ai-code-breaks-in-production/" hreflang="en">EN</a>
+    <span class="div" aria-hidden="true">/</span>
+    <span class="here" aria-current="true">NL</span>
+  </div>
+</nav>
+
+<main id="main">
+  <article>
+    <section class="hero shell">
+      <div class="measure">
+        <a class="back" href="/nl/">Home</a>
+        <h1 class="page-title">Waarom AI-code stukgaat in productie</h1>
+        <p class="answer">AI-gebouwde apps gaan in productie meestal stuk om één structurele reden: ze zijn geverifieerd door er af uit te zien, niet door bewezen af te zijn. De demo slaagt omdat hij het gelukkige pad draait dat de bouwer al kent. Echte gebruikers nemen dat pad niet. En de gaten die de demo nooit heeft beproefd, zijn precies waar het misgaat. De oplossing is niet meer testen van de demo; het is veranderen wat "af" mag betekenen.</p>
+      </div>
+    </section>
+
+    <div class="beats shell">
+
+      <section class="beat measure">
+        <h2>De 80/20-instorting</h2>
+        <p>De eerste 80% van een AI-build komt snel en ziet er compleet uit. De laatste 20%, het deel dat echte gebruikers overleeft, is waar het uit elkaar valt. Dat laatste stuk is niet "meer van hetzelfde werk". Het is een ander soort correctheid: de rommelige echte paden, de koude start, de lege toestanden, de invoer die niemand heeft gedemo't. AI-generatie is sterk in de eerste 80% en stilletjes zwak in de laatste 20%, en het gat is onzichtbaar tot gebruikers het vinden.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>"Werkt als je meteen naar het scherm springt" is niet werken</h2>
+        <p>Veruit de meest voorkomende productiebreuk: de functie werkt alleen wanneer je haar los laadt, recht naar het juiste scherm, met de juiste toestand al aanwezig. Een echte gebruiker komt koud binnen, van voren af aan, en het pad dat hem daarheen zou moeten dragen was nooit echt aangelegd. Dus ik weiger een sluiproute-naar-het-scherm als bewijs van wat dan ook. Twee controles bepalen "af":</p>
+        <p class="exhibit">de hoofdhandeling die wordt voltooid door de echte, gerenderde interface, en een gloednieuwe gebruiker die de functie bereikt via de route die echte mensen nemen</p>
+        <p>Beide zijn dingen die een demo overslaat en die productie eist.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>Je kunt de build niet vragen of hij af is</h2>
+        <p>De diepere reden dat deze gaten worden uitgeleverd, is dat het rapport wordt vertrouwd. Een build (of de AI die hem maakte) die "af" rapporteert, vertelt je bijna niets. Dat vertrouwen volgt de werkelijkheid slechter dan kop of munt. Het enige betrouwbare signaal is bewijs dat je niet kunt praten tot het bestaat:</p>
+        <p class="exhibit">de commit, de slagende test, de handeling die wordt voltooid door de echte UI</p>
+        <p>Wanneer "af" daaruit wordt berekend in plaats van beweerd, sluit het gat tussen demo en productie, omdat het ding dat er af uitzag het nu moet bewijzen.</p>
+      </section>
+
+      <section class="beat measure">
+        <h2>Wat ik eraan doe</h2>
+        <p>Ik behandel de laatste 20% als het eigenlijke werk, niet als het opruimen. Ik breek het product op de manier waarop jouw gebruikers dat zullen doen (koude starts, echte navigatie, de invoer die niemand heeft gedemo't) voordat zij komen om het voor jou te breken. En ik scheid het ding dat het werk beoordeelt van het ding dat het bouwde, zodat "af" een oordeel uit bewijs is, geen zelfrapportage. Als jouw AI-gebouwde app perfect is in de demo en sterft bij echte gebruikers, is dat gat het symptoom dat ik als eerste lees.</p>
+      </section>
+
+    </div>
+
+    <section class="cta shell" id="close">
+      <div class="measure">
+        <div class="callout">
+          <a href="/nl/#contact">Als je build schoon demo't en sterft bij echte gebruikers, is dat het gat dat ik als eerste lees. Laat me het echte ding zien. Die eerlijke diagnose is waar het werk begint.</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="shell">
+  <div class="measure inner">
+    <div class="colophon">
+      <span class="copy">&copy; <span id="yr">2026</span> Mark Born</span>
+      <!--email_off--><a class="mail" href="mailto:info@markborn.nl">info@markborn.nl</a><!--/email_off-->
+      <span class="loc">Nijmegen, Nederland</span>
+    </div>
+    <a class="foot-link" href="/nl/">Home</a>
+  </div>
+</footer>
+<script>(function(){var y=document.getElementById('yr');if(y){y.textContent=new Date().getFullYear();}})();</script>
+</body>
+</html>
