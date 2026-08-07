@@ -2,7 +2,6 @@
 
 Contact: mailto:info@markborn.nl
 Preferred-Languages: en, nl
-Canonical: https://markborn.nl/.well-known/security.txt
 Canonical: https://markborn.nl/security.txt
 Expires: 2027-06-30T23:59:59.000Z
 
