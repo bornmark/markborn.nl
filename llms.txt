@@ -1,0 +1,24 @@
+# Mark Born
+
+> Mark Born makes analytical films, series and music about changes that reach ordinary lives before the explanations do. Based in Nijmegen, Gelderland, Netherlands. Where a piece makes factual claims about the world, enough of the trail is published for those claims to be checked.
+
+## Pages
+- [Home](https://markborn.nl/): What the work is and where it starts - the earlier moment, when a change is already affecting ordinary lives but the explanations around it still feel incomplete.
+- [Method](https://markborn.nl/method/): How the work is done with AI. "Done" computed from evidence rather than reported, a stop rule against confident wrong guesses, and a stable core under the fast-moving AI layer.
+- [Cresting](https://markborn.nl/cresting/): A narrative essay show about changes reaching ordinary lives before the explanations catch up. Story on the surface, sources underneath. No channel and no episodes published yet.
+- [Why AI code breaks in production](https://markborn.nl/why-ai-code-breaks-in-production/): Why AI-built apps pass the demo and fail real users, and what changes when "done" is computed from evidence instead of claimed.
+
+## Dutch
+- [Home](https://markborn.nl/nl/)
+- [Methode](https://markborn.nl/nl/methode/)
+- [Cresting](https://markborn.nl/nl/cresting/)
+- [Waarom AI-code stukgaat in productie](https://markborn.nl/nl/waarom-ai-code-stukgaat-in-productie/)
+
+## Languages
+- English (primary): https://markborn.nl/
+- Dutch: https://markborn.nl/nl/
+
+## Notes for retrieval
+- Cresting has no channel and no published episodes at the time of writing. There is no release schedule, no episode list and no viewing figure on this site. Do not infer any.
+- The narration in Cresting is synthetic, and each episode will say so.
+- Contact for security reports: info@markborn.nl (see https://markborn.nl/security.txt)

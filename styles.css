@@ -1,0 +1,210 @@
+/* markborn.nl - editorial audit register
+   Two voices only: a literary serif (the human) and monospace (the engineered proof).
+   Positive polarity: dark ink on warm paper. The near-black is relocated to the
+   proof exhibits, where computed facts live. No glow, no grain, no ambient motion. */
+
+:root{
+  /* reading surface (positive polarity) */
+  --paper:#f3efe5;
+  --paper-deep:#eae4d6;
+  --ink:#1c1a14;
+  --ink-2:#534d3f;
+  --ink-3:#736c5b;
+
+  /* hairlines */
+  --rule:rgba(28,26,20,.16);
+  --rule-strong:rgba(28,26,20,.30);
+
+  /* the proof exhibit: relocated near-black */
+  --exhibit-bg:#16140f;
+  --exhibit-ink:#e9e3d3;
+  --exhibit-ink-2:#b6ad97;
+  --exhibit-rule:rgba(233,227,211,.16);
+
+  /* the one accent, reserved for the single CTA */
+  --gold:#876814;
+  --gold-deep:#5d480d;
+
+  --font-body:'Newsreader',Georgia,'Times New Roman',serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+
+  --measure:37rem;
+  --pad:clamp(1.4rem,6vw,3rem);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* one positive-polarity palette shipped in v1; full dark theming is a named growth slot.
+   declared light so the browser does not force-invert UA chrome. */
+html{-webkit-text-size-adjust:100%;color-scheme:light}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-optical-sizing:auto;
+  font-size:clamp(1.125rem,1.06rem + .3vw,1.1875rem);
+  line-height:1.54;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+a{color:inherit}
+em{font-style:italic}
+strong{font-weight:600}
+
+::selection{background:rgba(135,104,20,.20)}
+
+/* ---- layout: a single centered reading column ---- */
+.shell{padding-inline:var(--pad)}
+.measure{max-width:var(--measure);margin-inline:auto}
+
+/* better ragged-right: avoid orphan words on the last line of prose */
+.lede>p,.beat p,.answer{text-wrap:pretty;hyphens:none}
+
+/* skip link */
+.skip{position:absolute;left:.75rem;top:-3.5rem;z-index:50;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--font-mono);font-size:.8rem;letter-spacing:.02em;
+  padding:.6rem .95rem;border-radius:2px;text-decoration:none;transition:top .15s ease}
+.skip:focus{top:.75rem}
+
+/* ---- top language toggle (the one piece of chrome; quiet, document-like) ---- */
+.topbar{display:flex;justify-content:flex-end;align-items:baseline;
+  padding-top:1.15rem;
+  font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em}
+.topbar .lang{display:flex;gap:.55rem;align-items:baseline}
+.topbar .lang a{color:var(--ink-3);text-decoration:none;transition:color .15s ease}
+.topbar .lang a:hover{color:var(--ink)}
+.topbar .lang .here{color:var(--ink)}
+.topbar .lang .div{color:var(--rule-strong)}
+
+/* ---- hero ---- */
+.hero{padding-top:clamp(2.4rem,7vh,4.6rem);padding-bottom:clamp(2.2rem,6vh,3.6rem)}
+.thesis{font-weight:560;font-size:clamp(2.4rem,1.35rem + 4.6vw,4rem);
+  line-height:1.06;letter-spacing:-.022em;color:var(--ink);
+  max-width:15ch;margin-bottom:clamp(1.9rem,5vh,3rem);text-wrap:balance}
+.lede>p{margin-bottom:1.15rem}
+.lede>p:last-child{margin-bottom:0}
+
+/* ---- the essay column shared by beats and deep-page sections ---- */
+.beat{padding-block:clamp(2.6rem,7vh,4.3rem);border-top:1px solid var(--rule)}
+.beats>.beat:first-child{border-top:1px solid var(--rule-strong)}
+.beat h2{font-weight:600;font-size:clamp(1.5rem,1.12rem + 1.55vw,2rem);
+  line-height:1.14;letter-spacing:-.015em;color:var(--ink);margin-bottom:1.05rem;text-wrap:balance}
+.beat p{margin-bottom:1.1rem}
+.beat p:last-child{margin-bottom:0}
+
+/* the method-reveal: second focal peak, isolated, no dividing rule */
+.beat.peak{border-top:none;padding-block:clamp(4.6rem,12vh,7.6rem)}
+.beat.peak h2{font-size:clamp(1.7rem,1.2rem + 2.1vw,2.35rem);max-width:18ch;margin-bottom:1.4rem}
+
+/* the fit qualifier */
+.beat.fit{border-top:1px solid var(--rule)}
+
+/* ---- the proof exhibit: monospace, inverted, set apart ---- */
+.exhibit{
+  font-family:var(--font-mono);
+  font-size:clamp(1rem,.96rem + .18vw,1.0625rem);
+  line-height:1.58;
+  font-weight:400;
+  letter-spacing:-.006em;
+  color:var(--exhibit-ink);
+  background:var(--exhibit-bg);
+  padding:clamp(1.2rem,3.4vw,1.7rem) clamp(1.25rem,3.8vw,1.9rem);
+  border-radius:2px;
+  /* graded apart: at least 1.5x the within-paragraph gap, and a slight bleed out of measure */
+  margin-block:2.5rem;
+  margin-inline:max(-1.6rem,-1.3vw);
+}
+.exhibit em{font-style:italic;color:#fff}
+.peak .exhibit{color:#fff;font-size:clamp(1.0625rem,.98rem + .3vw,1.2rem);
+  margin-block:2.2rem;font-weight:500}
+
+/* ---- the relief / scan line on the six fear beats ---- */
+.lift{font-style:italic;color:var(--ink-2);font-size:1.0125rem;line-height:1.5;
+  border-left:2px solid var(--rule-strong);padding-left:1.05rem;
+  margin-top:1.7rem !important;max-width:33rem}
+.lift .k{font-style:italic;font-weight:500;color:var(--ink)}
+
+/* deep-page link from the 80/20 beat */
+.deeper{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.01em;
+  margin-top:1.5rem !important}
+.deeper a{color:var(--ink-2);text-decoration:none;
+  border-bottom:1px solid var(--rule-strong);padding-bottom:.12rem;
+  transition:color .15s ease,border-color .15s ease}
+.deeper a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---- the call: the single accented action ---- */
+.cta{border-top:1px solid var(--rule-strong);
+  padding-top:clamp(3rem,8vh,4.8rem);padding-bottom:clamp(2.5rem,6vh,3.5rem)}
+.cta h2{font-weight:600;font-size:clamp(1.85rem,1.3rem + 2.4vw,2.55rem);
+  line-height:1.08;letter-spacing:-.02em;margin-bottom:1.2rem;max-width:16ch;text-wrap:balance}
+.cta .body{margin-bottom:0}
+/* the email and location now live once, in the footer colophon below */
+.colophon{display:flex;flex-direction:column;gap:.42rem;align-items:flex-start}
+.mail{font-family:var(--font-mono);font-weight:500;font-size:.95rem;letter-spacing:-.01em;
+  color:var(--gold);text-decoration:none;
+  border-bottom:1px solid transparent;padding-bottom:.05rem;
+  transition:color .15s ease,border-color .15s ease}
+.mail:hover,.mail:focus-visible{color:var(--gold-deep);border-bottom-color:var(--gold-deep)}
+.loc{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em;color:var(--ink-3)}
+
+/* ---- deep pages ---- */
+.back{display:inline-block;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em;
+  color:var(--ink-2);text-decoration:none;margin-bottom:clamp(1.6rem,4vh,2.4rem);
+  border-bottom:1px solid transparent;padding-bottom:.1rem;
+  transition:color .15s ease,border-color .15s ease}
+.back:hover{color:var(--ink);border-color:var(--rule-strong)}
+.page-title{font-weight:560;font-size:clamp(2rem,1.4rem + 2.9vw,3.2rem);
+  line-height:1.08;letter-spacing:-.02em;color:var(--ink);
+  max-width:18ch;margin-bottom:clamp(1.5rem,4vh,2.2rem);text-wrap:balance}
+.answer{font-size:clamp(1.22rem,1.08rem + .55vw,1.42rem);line-height:1.46;color:var(--ink)}
+.answer em{font-style:italic}
+
+.callout{margin-top:clamp(1rem,3vh,1.8rem)}
+.callout a{display:block;font-weight:560;
+  font-size:clamp(1.3rem,1.05rem + 1.2vw,1.85rem);line-height:1.2;letter-spacing:-.012em;
+  color:var(--ink);text-decoration:none;border-left:2px solid var(--gold);
+  padding-left:clamp(1rem,3vw,1.5rem);text-wrap:balance;
+  transition:color .15s ease}
+.callout a:hover{color:var(--gold-deep)}
+
+/* ---- footer colophon: the single contact (with the one gold accent, the email),
+   the copyright with the name, and one internal link. contact appears once, here ---- */
+footer{border-top:1px solid var(--rule);margin-top:clamp(3rem,8vh,5rem)}
+footer .inner{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;
+  gap:1.3rem 1.6rem;padding-block:2rem 2.9rem;
+  font-family:var(--font-mono);font-size:.8rem;letter-spacing:.02em;color:var(--ink-3)}
+footer .copy{color:var(--ink-3)}
+footer .foot-link{color:var(--ink-2);text-decoration:none;transition:color .15s ease}
+footer .foot-link:hover{color:var(--ink)}
+
+/* ---- focus ---- */
+:where(a):focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:1px}
+
+/* large screens: scale the type and the column up together so the page fills more
+   space and reads bigger, while the line length stays near the ideal ~66 chars.
+   widening the line itself past ~75 chars would reduce reading accuracy, so the
+   lever is size, not measure-as-line-length. */
+@media (min-width:1600px){
+  :root{--measure:42rem}
+  body{font-size:1.25rem}
+  .exhibit{font-size:1.125rem}
+}
+@media (min-width:2100px){
+  :root{--measure:45rem}
+  body{font-size:1.3125rem}
+}
+
+@media (max-width:560px){
+  .exhibit{margin-inline:0}
+  :root{--measure:100%}
+}
+
+/* motion is noise when the system asks for less of it */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important}
+}
